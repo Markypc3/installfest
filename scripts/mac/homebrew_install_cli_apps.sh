@@ -13,16 +13,16 @@ packagelist=(
   graphviz
 
   # Image resizing
-  imagemagick
+  #imagemagick
 
   # PhantomJS is a headless WebKit scriptable with a JavaScript API
   phantomjs
 
   # WebKit implementation of qt for Capybara testing
-  qt
+  #qt
 
   # Qt for Mac OS X
-  qt4
+  #qt4
 
   # Advanced in-memory key-value store that persists on disk
   redis
@@ -37,8 +37,13 @@ packagelist=(
   # Directory visualizer
   tree
 
+  # git
+  git
+
   # Git visualization
   tig
+
+
 )
 
 brew install ${packagelist[@]}
