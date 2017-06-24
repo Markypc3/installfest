@@ -64,6 +64,16 @@ Make sure that there are no errors (on the load page)!
 
 ## Step 3
 
+You've already created and exchanged your public SSH keys with Github, but you haven't yet sent them up to `git.generalassemb.ly`. 
+1. In the terminal, the following command will copy your public key to your clipboard
+`pbcopy < ~/.ssh/id_rsa.pub`.
+2. Go to [your settings page][ghe-settings] and add a **New SSH key**
+1. Skip the title, and **PASTE** the contents of your clipboard in the key area. **DO NOT TYPE ANYTHING ELSE**
+1. You've just added a new public key to git.generalassemb.ly! **Remember to _always_clone using SSH, not HTTPS!** 
+
+
+## Step 4
+
 ##### Final Set-up, Mac OS
 
 1. **Google Chrome**: [download and install][chrome-link] the Google Chrome
@@ -89,5 +99,5 @@ Make sure that there are no errors (on the load page)!
    work.
 
 <!-- LINKS -->
-
+[ghe-settings]: https://git.generalassemb.ly/settings/keys
 [chrome-link]: https://www.google.com/chrome/browser/desktop
