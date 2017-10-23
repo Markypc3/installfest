@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMPILED_AT='Mon Oct 23 15:27:48 EDT 2017'
+COMPILED_AT='Wed Feb 07 17:08:37 EST 2018'
 #
 #  _           _        _ _  __           _
 # (_)_ __  ___| |_ __ _| | |/ _| ___  ___| |_
@@ -503,16 +503,16 @@ allow_group_by_acls() {
 inform "Installing the Homebrew package manager..." true
 
 # Set up permissions for /usr/local to anyone in admin group!
-echo "Setting permissions of the Homebrew directory..."
-grant_current_user_permissions /usr/local
-allow_group_by_acls admin /usr/local
-show "Complete!"
+# echo "Setting permissions of the Homebrew directory..."
+# grant_current_user_permissions /usr/local
+# allow_group_by_acls admin /usr/local
+# show "Complete!"
 
-# Set up permissions for /Library/Caches/Homebrew to anyone in admin group!
-echo "Setting permissions of the Homebrew library cache..."
-grant_current_user_permissions /Library/Caches/Homebrew
-allow_group_by_acls admin /Library/Caches/Homebrew
-show "Complete!"
+# # Set up permissions for /Library/Caches/Homebrew to anyone in admin group!
+# echo "Setting permissions of the Homebrew library cache..."
+# grant_current_user_permissions /Library/Caches/Homebrew
+# allow_group_by_acls admin /Library/Caches/Homebrew
+# show "Complete!"
 
 # Installs Homebrew, our package manager
 # http://brew.sh/
@@ -527,7 +527,6 @@ else
 fi
 
 inform "Updating Homebrew and formulae..." true
-brew update # Make sure we're using the latest Homebrew
 brew upgrade # Upgrade any already-installed formulae
 show "Complete!"
 
@@ -535,12 +534,11 @@ inform "Adding Homebrew taps..." true
 # These formulae duplicate software provided by OS X
 # though may provide more recent or bugfix versions, and
 # extra versions (other than default) of certain packages.
-brew tap homebrew/dupes
-brew tap homebrew/versions # necessary for specific versions of libs
 
 # Ensures all tapped formula are symlinked into Library/Formula
 # and prunes dead formula from Library/Formula.
 brew tap --repair
+brew prune
 
 # Remove outdated versions from the cellar
 brew cleanup
@@ -605,16 +603,16 @@ else
   echo "Homebrew 'brew' command available."
 fi
 
-check_owners_in /usr/local
-if [ -d /usr/local/bin ]; then
-  check_owners_in /usr/local/bin
-fi
-if [ -d /usr/local/etc ]; then
-  check_owners_in /usr/local/etc
-fi
-if [ -d /usr/local/var ]; then
-  check_owners_in /usr/local/var
-fi
+# check_owners_in /usr/local
+# if [ -d /usr/local/bin ]; then
+#   check_owners_in /usr/local/bin
+# fi
+# if [ -d /usr/local/etc ]; then
+#   check_owners_in /usr/local/etc
+# fi
+# if [ -d /usr/local/var ]; then
+#   check_owners_in /usr/local/var
+# fi
 
 if [ "$BREW_FAIL" ]; then
   fail "Could not continue; incorrect permissions in /usr/local." true

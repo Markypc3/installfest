@@ -57,16 +57,16 @@ else
   echo "Homebrew 'brew' command available."
 fi
 
-check_owners_in /usr/local
-if [ -d /usr/local/bin ]; then
-  check_owners_in /usr/local/bin
-fi
-if [ -d /usr/local/etc ]; then
-  check_owners_in /usr/local/etc
-fi
-if [ -d /usr/local/var ]; then
-  check_owners_in /usr/local/var
-fi
+# check_owners_in /usr/local
+# if [ -d /usr/local/bin ]; then
+#   check_owners_in /usr/local/bin
+# fi
+# if [ -d /usr/local/etc ]; then
+#   check_owners_in /usr/local/etc
+# fi
+# if [ -d /usr/local/var ]; then
+#   check_owners_in /usr/local/var
+# fi
 
 if [ "$BREW_FAIL" ]; then
   fail "Could not continue; incorrect permissions in /usr/local." true
