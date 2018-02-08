@@ -18,32 +18,9 @@ mac/os_repair_permissions
 rbenv_remove_rvm
 mac/macports_remove
 
-github_capture_credentials
-github_add_ssh_key
 
 mac/homebrew_install
-mac/homebrew_ensure_install
 
-mac/homebrew_install_core_libs
-## the above is used to compile languages and libs, so must come first
-
-## the below uses brew, so must come after
-mac/git_install_hb
-git_completion
-git_configure
-
-rbenv_install
-rbenv_set_default_gems
-rbenv_install_version
-rbenv_set_version
-
-mac/nvm_setup
-nvm_install
-nvm_install_version
-
-mac/homebrew_install_core_utils
-mac/homebrew_install_cli_apps
-mac/homebrew_install_gui_apps
 mac/postgres_install_hb
 
 ## turned off for now, since students aren't asked to sign up
@@ -52,7 +29,9 @@ mac/postgres_install_hb
 # mac/heroku_add_ssh_key
 
 mac/os_configure
+settings/configure_bash
 
+# TODO: this stuff should all be in the tap
 settings/script_repo_clone
 
 settings/util_copy_files
@@ -60,8 +39,8 @@ settings/copy_dotfiles
 settings/copy_terminal_theme
 settings/copy_sublime_settings
 settings/copy_install_sublime_packages
-settings/mac_install_fonts
 
-code_dir_create
+
+# code_dir_create
 
 utils/script_footer

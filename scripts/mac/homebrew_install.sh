@@ -62,10 +62,10 @@ inform "Updating Homebrew and formulae..." true
 brew upgrade # Upgrade any already-installed formulae
 show "Complete!"
 
-inform "Adding Homebrew taps..." true
-# These formulae duplicate software provided by OS X
-# though may provide more recent or bugfix versions, and
-# extra versions (other than default) of certain packages.
+
+
+inform "Installing Homebrew apps and taps..." true
+curl https://git.generalassemb.ly/raw/wdi-nyc/installfest/master/Brewfile | brew bundle --file=-
 
 # Ensures all tapped formula are symlinked into Library/Formula
 # and prunes dead formula from Library/Formula.

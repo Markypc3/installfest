@@ -54,7 +54,7 @@
 PATH="$HOME/.rbenv/bin:$PATH"                              # RBENV
 PATH="/usr/local/share/npm/bin:$PATH"                      # NPM
 PATH="/usr/local/bin:/usr/local/sbin:$PATH"                # Homebrew
-PATH="/usr/local/heroku/bin:$PATH"                         # Heroku Toolbelt
+# PATH="/usr/local/heroku/bin:$PATH"                         # Heroku Toolbelt
 # Uncomment to use GNU versions of core utils by default.
 #   See scripts/mac/homebrew_install_core_utils.sh in the Installfest.
 #   In essence, Mac OS X is in BSD userland, while Linux et al are in
@@ -104,16 +104,6 @@ export HISTIGNORE="h"
 # Aliases
 # ====================
 
-## 'ls' lists information about files.
-# By default, show slashes for directories.
-alias ls='gls -F'
-
-# Enhanced ls, grouping directories and using colors.
-alias lf='gls --color -h --group-directories-first -F'
-
-# Long list format including hidden files and file information.
-alias ll='gls --color -h --group-directories-first -Fla'
-
 # List ACLs (finer-grained permissions that can be inherited).
 # ACLs are a necessary part of OSX fs since 10.6; see
 # - ACLs on OSX: https://goo.gl/PhkcA2
@@ -133,11 +123,6 @@ alias h='history'
 # If we make a change to our bash profile we need to reload it
 alias reload="clear; source ~/.bash_profile"
 
-# Execute verbosely
-alias cp='gcp -v'
-alias mv='gmv -v'
-alias rm='grm -v'
-alias mkdir='gmkdir -pv'
 
 # =================
 # Change System Settings
@@ -160,53 +145,13 @@ alias show_files="defaults write com.apple.finder AppleShowAllFiles TRUE && kill
 # alias subl='open -a "Sublime Text 2"'
 alias chrome='open -a "Google Chrome"'
 
-# =================
-# rbenv
-# =================
 
-# start rbenv (our Ruby environment and version manager) on open
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# =================
-# nvm (load io.js as node)
-# =================
-
-export NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
-# nvm use stable > /dev/null # PJ: using .nvmrc to set this... uncomment if not working
 
 # =================
 # Functions
 # =================
 
-#######################################
-# Quick Jump To Today's WDI Folder
-# See the script for usage.
-#######################################
 
-if [ -f ~/.bash_wdi_command.sh ]; then
-  source ~/.bash_wdi_command.sh
-fi
-
-#######################################
-# Set ACL permissions to inherit and
-# allow read, write and update actions.
-#
-# Arguments:
-#   1. Group Name
-#   2. Directory Path
-#######################################
-
-allow_group() {
-  local GROUP_NAME="$1"
-  local TARGET_DIR="$2"
-  local PERMISSIONS="read,write,delete,add_file,add_subdirectory"
-  local INHERITANCE="file_inherit,directory_inherit"
-
-  sudo mkdir -p "$TARGET_DIR"
-  sudo /bin/chmod -R -N "$TARGET_DIR"
-  sudo /bin/chmod -R +a "group:$GROUP_NAME:allow $PERMISSIONS,$INHERITANCE" "$TARGET_DIR"
-}
 
 #######################################
 # Start an HTTP server from a directory
@@ -285,11 +230,6 @@ if [ -f ~/.welcome_prompt.sh ]; then
   source ~/.welcome_prompt.sh
 fi
 
-# bash/zsh completion support for core Git.
-if [ -f ~/.git-completion.bash ]; then
-  source ~/.git-completion.bash
-fi
-
 # ====================================
 # Environmental Variables and API Keys
 # ====================================
@@ -298,5 +238,5 @@ fi
 # commands. Attempt to reserve this area for their use!
 ##########################################################################
 
-export HOMEBREW_EDITOR=nano
+export HOMEBREW_EDITOR=subl
 export NODE_REPL_HISTORY_FILE=~/.node_repl_history
