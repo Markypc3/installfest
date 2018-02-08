@@ -15,6 +15,7 @@ brew 'figlet'
 # core utils
 brew 'git'
 brew 'bash-git-prompt'
+brew 'bash-completion'
 brew 'tig'
 
 # language support
