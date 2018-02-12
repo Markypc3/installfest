@@ -221,6 +221,11 @@ if [ -f ~/.welcome_prompt.sh ]; then
   source ~/.welcome_prompt.sh
 fi
 
+if [ -f "/usr/local/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR="/usr/local/opt/bash-git-prompt/share"
+  source "/usr/local/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
 # ====================================
 # Environmental Variables and API Keys
 # ====================================
