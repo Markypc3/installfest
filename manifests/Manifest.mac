@@ -41,6 +41,5 @@ settings/copy_sublime_settings
 settings/copy_install_sublime_packages
 
 
-# code_dir_create
-
+code_dir_create
 utils/script_footer

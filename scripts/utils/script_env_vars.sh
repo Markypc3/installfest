@@ -9,8 +9,8 @@
 
 # FIXME (PJ) should have a better place to decide these versions:
 #   Ruby (rbenv), Python (pyenv), Node (nvm)
-BELOVED_RUBY_VERSION="2.4.1"
-CURRENT_STABLE_RUBY_VERSION="2.4.1"
+BELOVED_RUBY_VERSION="2.5.0"
+CURRENT_STABLE_RUBY_VERSION="2.5.0"
 
 # TODO (pj) decide what the python versions should really be...
 #   and maybe come up with a bigger, better place to hang this info
@@ -23,7 +23,7 @@ NODE_VERSION="stable" # using nvm's language...
 if [[ "$OSTYPE" == "darwin"* ]]; then
   SYSTEM="mac"
   BASH_FILE=".bash_profile"
-  MINIMUM_MAC_OS="10.7.0"
+  MINIMUM_MAC_OS="10.11.0"
 else
   SYSTEM="ubuntu"
   BASH_FILE=".bashrc"
