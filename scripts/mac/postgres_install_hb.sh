@@ -38,12 +38,12 @@
 
 
 inform "Starting Postgres now..." true
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+brew services restart postgres
 # give postgres time to load
 sleep 5s
 show "Complete!"
 
 inform "Creating a default user for Postgres..." true
 # create db matching user name so we can log in by just typing psql
-createdb ${USER}
+createdb
 show "Complete!"

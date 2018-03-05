@@ -38,7 +38,7 @@ brew 'sqlite'
 
 
 cask 'sublime-text'
-cask 'spectacle'
+cask 'spectacle', restart_service: true
 cask 'slack'
 cask 'caskroom/fonts/font-dejavusansmono-nerd-font'
 cask 'caskroom/fonts/font-dejavusansmono-nerd-font-mono'
