@@ -86,6 +86,14 @@ packagelist=(
 
   # headless WebKit scriptable with a JavaScript API.
   phantomjs
+
+  # tmux
+  tmux
+
+  #node js
+  nodejs
+  #npm
+  npm
 )
 
 sudo apt-get -y install ${packagelist[@]}

@@ -1,6 +1,6 @@
 # Google Chrome.........The Browser
 # HipChat...............The Chat Client
-# Sublime Text 2........The Text Editor
+# Sublime Text 3........The Text Editor
 
 # chrome
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
@@ -15,26 +15,29 @@ sudo apt-get -y install google-chrome-stable
 # sudo apt-get -y install hipchat
 
 # sublime
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+
 sudo apt-get -y update
+
 sudo apt-get -y install sublime-text
-
-# zsh
-# sudo apt-get -y install zsh
-
-# flux
-# sudo add-apt-repository -y ppa:kilian/f.lux
-# sudo apt-get -y update
-# sudo apt-get -y install fluxgui
 
 # hub
 git clone https://github.com/github/hub.git
 cd hub
-# TODO (phlco) permission problems... sudo chown -R `whoami` /usr/local/* ?
 rake install prefix=/usr/local
 
 # vim
 sudo apt-get -y install vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+cd ~/.vim/bundle
+git clone https://github.com/tpope/vim-rails.git
+vim -u NONE -c "helptags vim-rails/doc" -c q
+
+# there are siginificant plugins that will help both of these text editors
 
 # emacs
-# sudo apt-get -y install emacs
+sudo apt-get -y install emacs
