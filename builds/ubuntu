@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMPILED_AT='Thu Mar 08 11:38:18 EST 2018'
+COMPILED_AT='Mon Mar 12 19:55:04 EDT 2018'
 #
 #  _           _        _ _  __           _
 # (_)_ __  ___| |_ __ _| | |/ _| ___  ___| |_
@@ -637,6 +637,14 @@ vim -u NONE -c "helptags vim-rails/doc" -c q
 
 # emacs
 sudo apt-get -y install emacs
+
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
+sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
+sudo apt-get install code
+
 
 # open source object-relational database management system
 # https://www.digitalocean.com/community/articles/how-to-install-and-use-postgresql-on-ubuntu-12-04
