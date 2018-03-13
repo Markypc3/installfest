@@ -1,6 +1,7 @@
 #-------------------------------------------------------------------------------
 # Install rbenv (rbenv_install.sh)
 #-------------------------------------------------------------------------------
+#checking to see if Rake uses this or the other for ubuntu
 
 inform "Installing rbenv, our Ruby version manager..." true
 
