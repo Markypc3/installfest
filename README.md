@@ -59,7 +59,7 @@ Make sure that there are no errors (on the load page)!
 
 ## Step 3
 
-~~You've already created and exchanged your public SSH keys with Github Enterprise, but you haven't yet sent them up to `git.generalassemb.ly`. ~~
+~~You've already created and exchanged your public SSH keys with Github Enterprise, but you haven't yet sent them up to `git.generalassemb.ly`.~~
 2. Go to the GHE page to [generate new SSH keys][make-ssh-keys] and create a new **New SSH key**
 1. Go to [your settings][ghe-settings]/SSH keys...
 1. create a new SSH key.
