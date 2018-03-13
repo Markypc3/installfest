@@ -59,10 +59,10 @@ Make sure that there are no errors (on the load page)!
 
 ## Step 3
 
-~~~You've already created and exchanged your public SSH keys with Github Enterprise, but you haven't yet sent them up to `git.generalassemb.ly`. ~~~
-1. In the terminal, the following command will copy your public key to your clipboard
-`pbcopy < ~/.ssh/id_rsa.pub`.
+~~You've already created and exchanged your public SSH keys with Github Enterprise, but you haven't yet sent them up to `git.generalassemb.ly`. ~~
 2. Go to the GHE page to [generate new SSH keys][make-ssh-keys] and create a new **New SSH key**
+1. Go to [your settings][ghe-settings]/SSH keys...
+1. create a new SSH key.
 1. Skip the title, and **PASTE** the contents of your clipboard in the key area. **DO NOT TYPE ANYTHING ELSE**
 1. You've just added a new public key to git.generalassemb.ly! **Remember to _always_clone using SSH, not HTTPS!** 
 
