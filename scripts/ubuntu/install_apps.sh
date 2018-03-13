@@ -28,6 +28,9 @@ git clone https://github.com/github/hub.git
 cd hub
 rake install prefix=/usr/local
 
+#slack
+sudo apt-get -y install slack
+
 # vim
 sudo apt-get -y install vim
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -42,10 +45,11 @@ vim -u NONE -c "helptags vim-rails/doc" -c q
 # emacs
 sudo apt-get -y install emacs
 
+#VSCode
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 
 sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
-sudo apt-get install code
+sudo apt-get -y install code
 
