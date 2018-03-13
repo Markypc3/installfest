@@ -20,12 +20,10 @@ running the script!** *(We will back them up too, but just in case...)*
 Make sure you have your GitHub account information with you, including:
 
 - the email address you used to sign up,
-- your GitHub username, and
-- your GitHub password.
+- your GitHub Enterprise username, and
+- your GitHub Enterprise password.
 
-Note: on Mac, you need to run the script as a User with Administrator
-priviliges. If you only have a single user, then this is fine. If you
-have multiple users, let the instructors know!
+***Note: on Mac, you must be an Administrator to run the script.***
 
 ## Step 1
 
@@ -37,15 +35,12 @@ Paste this script into a Terminal prompt:
 bash <(curl -sL https://git.generalassemb.ly/raw/wdi-nyc/installfest/master/builds/mac)
 ```
 
-##### ~~For Ubuntu Linux~~
+##### For Ubuntu Linux
 
-~~Paste this script into a Terminal prompt:~~
+Paste this script into a Terminal prompt:
 
-~~`bash <(wget -qO- https://raw.githubusercontent.com/GA-WDI/installfest/master/builds/ubuntu)`~~
+`bash <(wget -qO- https://git.generalassemb.ly/raw/wdi-nyc/installfest/master/builds/ubuntu)`
 
-*Sadly, the Ubuntu script is out of date and is not currently 
-supported. If you'd like to help get it back in to working order, let us
-know!*
 
 ##### Run the script
 
@@ -64,10 +59,10 @@ Make sure that there are no errors (on the load page)!
 
 ## Step 3
 
-You've already created and exchanged your public SSH keys with Github, but you haven't yet sent them up to `git.generalassemb.ly`. 
+~~~You've already created and exchanged your public SSH keys with Github Enterprise, but you haven't yet sent them up to `git.generalassemb.ly`. ~~~
 1. In the terminal, the following command will copy your public key to your clipboard
 `pbcopy < ~/.ssh/id_rsa.pub`.
-2. Go to [your settings page][ghe-settings] and add a **New SSH key**
+2. Go to the GHE page to [generate new SSH keys][make-ssh-keys] and create a new **New SSH key**
 1. Skip the title, and **PASTE** the contents of your clipboard in the key area. **DO NOT TYPE ANYTHING ELSE**
 1. You've just added a new public key to git.generalassemb.ly! **Remember to _always_clone using SSH, not HTTPS!** 
 
@@ -76,8 +71,6 @@ You've already created and exchanged your public SSH keys with Github, but you h
 
 ##### Final Set-up, Mac OS
 
-1. **Google Chrome**: [download and install][chrome-link] the Google Chrome
-   web browser. Open the browser and set it as default!
 2. **Spectacle** (for Macs): open Spectacle using Spotlight, by pressing `⌘-Space`
    and typing `spec`, and then pressing `Return`. It will direct you to change
    your Accessibility settings to allow it to control windowing.
@@ -92,12 +85,13 @@ You've already created and exchanged your public SSH keys with Github, but you h
    by typing `subl .` Make sure that Sublime Text opens.
 5. **Slack**: ensure that you can open Slack (`⌘-Space`, and type `sla`) and 
    communicate with your classmates!
-6. **Files**: in your terminal, type `cd ~/code`. You should now have a 
+6. **Files**: in your terminal, type `cd ~/wdi`. You should now have a 
    directory here where you can store all of your programming projects! When
    you then type `ls` to list the contents of that directory, you should see
-   a directory named `wdi` — this is where you can store all of your class
+   a few directories named `unit0X` — these are where you will store all of your class
    work.
 
 <!-- LINKS -->
+[make-ssh-keys]: https://help.github.com/enterprise/2.12/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 [ghe-settings]: https://git.generalassemb.ly/settings/keys
 [chrome-link]: https://www.google.com/chrome/browser/desktop
