@@ -32,7 +32,7 @@ Make sure you have your GitHub account information with you, including:
 Paste this script into a Terminal prompt:
 
 ```
-bash <(curl -sL https://git.generalassemb.ly/raw/wdi-nyc/installfest/master/builds/mac)
+bash <(curl -sL https://raw.git.generalassemb.ly/wdi-nyc/installfest/master/builds/mac)
 ```
 
 ##### For Ubuntu Linux
