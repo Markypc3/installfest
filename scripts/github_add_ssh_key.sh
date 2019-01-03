@@ -30,10 +30,10 @@ inform "Uploading SSH key to GitHub..." true
 
 # TODO (PJ) test if this fails or not!
 curl https://api.github.com/user/keys \
-  -H "User-Agent: WDIInstallFest" \
+  -H "User-Agent: MindWeaverInstallFest" \
   -H "Accept: application/vnd.github.v3+json" \
   -u "$github_name:$github_password" \
-  -d '{"title":"WDI Installfest", "key":"'"$public_key"'"}'
+  -d '{"title":"MindWeaver Installfest", "key":"'"$public_key"'"}'
 
 echo ""
 show "Key uploaded!" true

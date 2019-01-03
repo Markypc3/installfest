@@ -26,7 +26,7 @@ brew 'ruby'
 
 # others
 brew 'phantomjs'
-brew 'heroku'
+brew 'heroku/brew/heroku'
 brew 'tidy-html5'
 brew 'lighttpd'
 
@@ -36,7 +36,8 @@ brew 'postgresql', restart_service: true
 brew 'sqlite'
 # brew 'redis'
 
-
+cask 'mattermost'
+cask 'atom'
 cask 'sublime-text'
 cask 'spectacle', restart_service: true
 cask 'slack'

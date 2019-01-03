@@ -34,6 +34,10 @@ settings/configure_bash
 # TODO: this stuff should all be in the tap
 settings/script_repo_clone
 
+
+github_capture_credentials
+github_add_ssh_key
+
 settings/util_copy_files
 settings/copy_dotfiles
 settings/copy_terminal_theme
