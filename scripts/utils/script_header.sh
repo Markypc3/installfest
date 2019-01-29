@@ -10,6 +10,7 @@
 
 # Authors: Phillip Lamplugh, GA Instructor (2014),
 #          PJ Hughes, GA Instructor (2014 & 2015)
+#          Marco Pariente-Cohen, MindWeaver Founder and GA BLT (2014 & 2015)
 
 # Resources:
 #

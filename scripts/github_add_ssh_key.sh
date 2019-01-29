@@ -33,7 +33,7 @@ curl https://api.github.com/user/keys \
   -H "User-Agent: MindWeaverInstallFest" \
   -H "Accept: application/vnd.github.v3+json" \
   -u "$github_name:$github_password" \
-  -d '{"title":"MindWeaver Installfest", "key":"'"$public_key"'"}'
+  -d '{"title":"MindWeaverInstallfest", "key":"'"$public_key"'"}'
 
 echo ""
 show "Key uploaded!" true

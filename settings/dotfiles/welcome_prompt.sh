@@ -8,8 +8,8 @@ WELCOME_PROMPT=true
 
 welcome_msg() {
   echo ${BG_RED}${WHITE} \
-      GA${RESET}${WHITE}${BG_BLACK} \
-      General Assembly ${RESET}${BG_YELLOW}${BLACK} \
+      MPC${RESET}${WHITE}${BG_BLACK} \
+      Mindweaver ${RESET}${BG_YELLOW}${BLACK} \
       Web Development Immersive ${RESET}
   echo "------------------------------------------"
   echo $(git --version)
@@ -26,4 +26,3 @@ welcome_msg() {
 }
 
 if [[ $WELCOME_PROMPT == true ]]; then welcome_msg; fi
-

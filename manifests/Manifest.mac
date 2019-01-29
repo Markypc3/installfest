@@ -37,6 +37,8 @@ settings/script_repo_clone
 
 github_capture_credentials
 github_add_ssh_key
+git_configure
+git_completion
 
 settings/util_copy_files
 settings/copy_dotfiles

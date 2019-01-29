@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMPILED_AT='Mon Mar 12 20:26:14 EDT 2018'
+COMPILED_AT='Tue Jan 29 12:05:56 EST 2019'
 #
 #  _           _        _ _  __           _
 # (_)_ __  ___| |_ __ _| | |/ _| ___  ___| |_
@@ -13,6 +13,7 @@ COMPILED_AT='Mon Mar 12 20:26:14 EDT 2018'
 
 # Authors: Phillip Lamplugh, GA Instructor (2014),
 #          PJ Hughes, GA Instructor (2014 & 2015)
+#          Marco Pariente-Cohen, MindWeaver Founder and GA BLT (2014 & 2015)
 
 # Resources:
 #
@@ -64,7 +65,7 @@ fi
 SCRIPT_ROOT="$HOME/.wdi"
 
 # TODO (PJ) this needs to be more robust, BY FAR!
-SCRIPT_REPO="https://git.generalassemb.ly/wdi-nyc/installfest.git"
+SCRIPT_REPO="https://github.com/Markypc3/installfest.git"
 SCRIPT_REPO_BRANCH="master"
 
 # the downloaded repo
@@ -360,10 +361,10 @@ inform "Uploading SSH key to GitHub..." true
 
 # TODO (PJ) test if this fails or not!
 curl https://api.github.com/user/keys \
-  -H "User-Agent: WDIInstallFest" \
+  -H "User-Agent: MindWeaverInstallFest" \
   -H "Accept: application/vnd.github.v3+json" \
   -u "$github_name:$github_password" \
-  -d '{"title":"WDI Installfest", "key":"'"$public_key"'"}'
+  -d '{"title":"MindWeaverInstallfest", "key":"'"$public_key"'"}'
 
 echo ""
 show "Key uploaded!" true
