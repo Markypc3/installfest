@@ -32,7 +32,7 @@ fi
 SCRIPT_ROOT="$HOME/.wdi"
 
 # TODO (PJ) this needs to be more robust, BY FAR!
-SCRIPT_REPO="https://git.generalassemb.ly/wdi-nyc/installfest.git"
+SCRIPT_REPO="https://github.com/Markypc3/installfest.git"
 SCRIPT_REPO_BRANCH="master"
 
 # the downloaded repo
