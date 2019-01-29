@@ -19,7 +19,7 @@ fi
 show brew doctor
 
 inform "Installing Homebrew apps and taps..." true
-curl https://git.generalassemb.ly/raw/wdi-nyc/installfest/master/Brewfile | brew bundle --file=-
+curl https://raw.githubusercontent.com/Markypc3/installfest/master/Brewfile | brew bundle --file=-
 
 # Ensures all tapped formula are symlinked into Library/Formula
 # and prunes dead formula from Library/Formula.
